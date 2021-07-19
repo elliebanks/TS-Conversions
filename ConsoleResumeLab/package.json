@@ -1,0 +1,26 @@
+{
+  "name": "typeScript",
+  "version": "1.0.0",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "tsc -w"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/elliebanks/TS-Conversions.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/elliebanks/TS-Conversions/issues"
+  },
+  "homepage": "https://github.com/elliebanks/TS-Conversions#readme",
+  "main": "webpack.config.js",
+  "description": "",
+  "dependencies": {
+    "ts-loader": "^9.2.3",
+    "webpack": "^5.45.1",
+    "webpack-cli": "^4.7.2"
+  }
+}
