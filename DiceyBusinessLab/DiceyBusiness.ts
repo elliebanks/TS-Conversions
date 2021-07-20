@@ -1,15 +1,20 @@
-let diceArray = []; //global array
-let divContainer = document.getElementById('container');
+let diceArray: Die[] = []; //global array
+let divContainer = <HTMLDivElement>document.getElementById('container');
 
-function randomNumber(min, max) {
+function randomNumber(min: number, max: number) {
     return Math.floor(Math.random() * (max - min + 1)) + min;
 }; //generates random number for the die roll
 
-let newDie = document.getElementById('createButton');
-let reRoll = document.getElementById('rollTheDice');
-let sumOfDice = document.getElementById('sumButton');
+let newDie = <HTMLButtonElement>document.getElementById('createButton');
+let reRoll = <HTMLButtonElement>document.getElementById('rollTheDice');
+let sumOfDice = <HTMLButtonElement>document.getElementById('sumButton');
 
 class Die {
+    div: HTMLDivElement;
+    value!: number;
+    id: number;
+    
+
     constructor() {
         this.div = document.createElement('div'); //creates a div
         this.div.classList.add('Die'); //assigns class to div
@@ -18,7 +23,7 @@ class Die {
         this.roll();        
         
         this.id = Date.now();
-        this.div.setAttribute('id', this.id);
+        this.div.setAttribute('id', this.id.toString());
         
         //this.div.innerText = this.value; displays number on the die
         
@@ -27,7 +32,7 @@ class Die {
         });
 
         this.div.addEventListener('dblclick', () => {
-            let deleteMe;
+            let deleteMe: any;
 
             diceArray.forEach((die, i) => {
                 if (this.id == die.id) {
@@ -37,13 +42,14 @@ class Die {
 
             diceArray.splice(deleteMe, 1);
         
-            document.getElementById(this.id).remove();
+            const elToRemove = <HTMLDivElement>document.getElementById(this.id.toString());
+            elToRemove.remove();
         });
     }
 
     roll() {
         this.value = randomNumber(1, 6); //roll function will generate random number between 1 and 6, assigns to the value
-        this.div.innerText = this.value;
+        this.div.innerText = this.value.toString();
     };
 }
 

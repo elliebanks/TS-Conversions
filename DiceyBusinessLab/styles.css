@@ -1,0 +1,137 @@
+  
+@keyframes gradient {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+#buttonContainer {
+  margin: auto;
+  text-align: center;
+}
+#container {
+  margin: auto;
+  justify-content: center;
+  align-items: center;
+  height: 200px;
+  width: 800px;
+  border-radius: 10px;
+  text-align: center;
+  background: linear-gradient(-45deg, #ee7752, #a24f6f, #bc9bd1, #e3c76b);
+    background-size: 400% 400%;
+    animation: gradient 5s ease infinite;
+  
+}
+
+.Die {
+  display: inline-flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  width: 100px;
+  height: 100px;
+  padding: 20px;
+  margin: 20px;
+  font-family: 'Codystar', cursive;
+  font-size: 50px;
+  font-weight: 800;
+  background-color: rgb(254, 254, 252);
+  border-radius: 5px;
+  color: rgb(26, 22, 22);
+  cursor: pointer;
+}
+
+#createButton {
+  font-size: 20px;
+  font-weight: 200;
+  letter-spacing: 1px;
+  padding: 13px 50px 13px;
+  outline: 0;
+  border: 1px solid black;
+  cursor: pointer;
+  position: relative;
+  background-color: rgba(0, 0, 0, 0);
+  margin-right: 20px;
+  
+}
+
+#createButton::after {
+  content: "";
+  background-color: #f7e686;
+  width: 100%;
+  z-index: -1;
+  position: absolute;
+  height: 100%;
+  top: 7px;
+  left: 7px;
+  transition: 0.2s;
+}
+
+#createButton:hover::after {
+  top: 0px;
+  left: 0px;
+}
+#rollTheDice {
+  font-size: 20px;
+  font-weight: 200;
+  letter-spacing: 1px;
+  padding: 13px 50px 13px;
+  outline: 0;
+  border: 1px solid black;
+  cursor: pointer;
+  position: relative;
+  background-color: rgba(0, 0, 0, 0);
+  margin-right: 20px;
+  
+}
+
+#rollTheDice::after {
+  content: "";
+  background-color: #f4b972;
+  width: 100%;
+  z-index: -1;
+  position: absolute;
+  height: 100%;
+  top: 7px;
+  left: 7px;
+  transition: 0.2s;
+}
+
+#rollTheDice:hover::after {
+  top: 0px;
+  left: 0px;
+}
+#sumButton {
+  font-size: 20px;
+  font-weight: 200;
+  letter-spacing: 1px;
+  padding: 13px 50px 13px;
+  outline: 0;
+  border: 1px solid black;
+  cursor: pointer;
+  position: relative;
+  background-color: rgba(0, 0, 0, 0);
+}
+
+#sumButton::after {
+  content: "";
+  background-color: #f79e8a;
+  width: 100%;
+  z-index: -1;
+  position: absolute;
+  height: 100%;
+  top: 7px;
+  left: 7px;
+  transition: 0.2s;
+}
+
+#sumButton:hover::after {
+  top: 0px;
+  left: 0px;
+}
