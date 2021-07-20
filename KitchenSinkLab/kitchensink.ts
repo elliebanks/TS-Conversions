@@ -7,13 +7,11 @@ const usStates: number = 50;
 
 // compute the sum of 5 and 4
 
-let sumStates: number = usStates + 4;
-let sumStates2: number = usStates + 5;
-/*let sum = 5 + 4;
-console.log(sum);*/
+let sum: number = 5 + 4;
+console.log(sum);
 
 // create sayHello function with hello world alert
-function sayHello() {
+function sayHello() : void {
     alert("Hello World!");
     };
 
@@ -54,7 +52,12 @@ for (let i=0; i < favVeggies.length; i++) {
     };
 
 // create object with name and breed properties of pet
-const pet: {name: string, breed: string} = {
+interface myinterface {
+    name: string;
+    breed: string
+}
+
+let pet: myinterface = {
     name: 'Blu',
     breed: 'collie'
     };
@@ -62,20 +65,6 @@ const pet: {name: string, breed: string} = {
 console.log(pet.name, pet.breed);
 
 // create array of 5 objects, each with name and age
-/*interface People {
-    name: string;
-    age: number;
-}*/
-/* class People {
-    name: string;
-    age: number;
-
-    constructor(name: string, age: number) {
-        this.name = name;
-        this.age = age;
-    }
-} */
-
 let people: {name: string, age: number}[] = [
     {
         name: 'Liz',
@@ -122,6 +111,4 @@ function getLength(word: string) {
 getLength('Hello World!');
 
 // store the return of getLength function as a variable
-
-
 // determine if the return of function is an even or odd number and display message
