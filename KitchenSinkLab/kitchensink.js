@@ -4,10 +4,8 @@ var firstName = "Ellie";
 // number of US States as constant variable that will not change
 var usStates = 50;
 // compute the sum of 5 and 4
-var sumStates = usStates + 4;
-var sumStates2 = usStates + 5;
-/*let sum = 5 + 4;
-console.log(sum);*/
+var sum = 5 + 4;
+console.log(sum);
 // create sayHello function with hello world alert
 function sayHello() {
     alert("Hello World!");
@@ -45,26 +43,12 @@ for (var i = 0; i < favVeggies.length; i++) {
     console.log(favVeggies[i]);
 }
 ;
-// create object with name and breed properties of pet
 var pet = {
     name: 'Blu',
     breed: 'collie'
 };
 console.log(pet.name, pet.breed);
 // create array of 5 objects, each with name and age
-/*interface People {
-    name: string;
-    age: number;
-}*/
-/* class People {
-    name: string;
-    age: number;
-
-    constructor(name: string, age: number) {
-        this.name = name;
-        this.age = age;
-    }
-} */
 var people = [
     {
         name: 'Liz',
@@ -91,19 +75,15 @@ var people = [
 people.forEach(function (people) {
     checkAge(people.name, people.age);
 });
-//I have no idea if I am doing this right or not !
 // create a function called getLength that takes any word as an argument and returns number of characters
 function getLength(word) {
-    var wordLength = word.length;
-    if (wordLength % 2 == 0) {
-        console.log('The world is nice and even!');
-    }
-    else {
-        console.log('The world is an odd place!');
-    }
+    return word.length;
+}
+var wordLength = getLength('Hello World!');
+if (wordLength % 2 == 0) {
+    console.log('The world is nice and even!');
+}
+else {
+    console.log('The world is an odd place!');
 }
 ;
-// call getLength function
-getLength('Hello World!');
-// store the return of getLength function as a variable
-// determine if the return of function is an even or odd number and display message
