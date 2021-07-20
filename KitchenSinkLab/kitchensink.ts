@@ -92,23 +92,16 @@ let people: {name: string, age: number}[] = [
        checkAge(people.name, people.age)
    })
 
-   //I have no idea if I am doing this right or not !
-
-
 // create a function called getLength that takes any word as an argument and returns number of characters
-function getLength(word: string) {
-    let wordLength = word.length;
+function getLength(word: string): number {
+    return word.length;
+}
+    let wordLength: number = getLength('Hello World!');
     
     if (wordLength % 2 == 0) {
         console.log('The world is nice and even!');
         }
         else {
             console.log('The world is an odd place!');
-        }
-    };
-
-// call getLength function
-getLength('Hello World!');
-
-// store the return of getLength function as a variable
-// determine if the return of function is an even or odd number and display message
+        };
+    
